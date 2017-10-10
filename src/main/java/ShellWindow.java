@@ -67,8 +67,7 @@ class ShellWindow extends javax.swing.JFrame
         ActionListener,
         org.rosuda.REngine.REngineOutputInterface,
         org.rosuda.REngine.REngineInputInterface,
-        org.rosuda.REngine.REngineCallbacks,
-        org.nlogo.api.ExtensionManager {
+        org.rosuda.REngine.REngineCallbacks {
   private static final long serialVersionUID = 1L;
   final JFileChooser fc = new JFileChooser();
   javax.swing.filechooser.FileFilter ff =
@@ -399,25 +398,21 @@ class ShellWindow extends javax.swing.JFrame
   /*---------------------------------stuff due to ExtensionsManager -------------------*/
 
   /** Method used to wrap the isVisible method */
-  @Override
   public boolean anyExtensionsLoaded() {
     return this.isVisible();
   }
 
   /** Method used to wrap the setVisible(true) method call */
-  @Override
   public void finishFullCompilation() {
     this.setVisible(true);
   }
 
   /** Method used to wrap the setVisible(false) method call */
-  @Override
   public void reset() {
     this.setVisible(false);
   }
 
   /** Method used to empty the output area and history */
-  @Override
   public void startFullCompilation() {
     output.setText("");
     cmd_history.clear();
@@ -429,7 +424,6 @@ class ShellWindow extends javax.swing.JFrame
    *
    * @param arg0 unused
    */
-  @Override
   public void storeObject(Object arg0) {
     try {
       Entry.rConn.execute(
@@ -463,48 +457,40 @@ class ShellWindow extends javax.swing.JFrame
   /*------------------------- unused methods, due to ExtensionManager Interface --------------------*/
 
   /** currently unused */
-  @Override
   public String dumpExtensionPrimitives() {
     return null;
   }
 
   /** currently unused */
-  @Override
   public Iterable<org.nlogo.api.ClassManager> loadedExtensions() {
     return new ArrayList<org.nlogo.api.ClassManager>();
   }
 
   /** currently unused */
-  @Override
   public String dumpExtensions() {
     return null;
   }
 
   /** currently unused */
-  @Override
   public void importExtension(String arg0, ErrorSource arg1) throws CompilerException {}
 
   /** currently unused */
-  @Override
   public ExtensionObject readExtensionObject(String arg0, String arg1, String arg2)
       throws CompilerException {
     return null;
   }
 
   /** currently unused */
-  @Override
   public Object readFromString(String arg0) throws CompilerException {
     return null;
   }
 
   /** currently unused */
-  @Override
   public Primitive replaceIdentifier(String arg0) {
     return null;
   }
 
   /** currently unused */
-  @Override
   public Object retrieveObject() {
     return null;
   }
