@@ -48,7 +48,7 @@ See below on how to determine the appropriate values to for `r.home` and `jri.ho
 
 Windows requires an additional configuration step to make the R extension fully functional.
 The appropriate directory from your R installation needs to be added to your PATH.
-To do this, determine where your R installation is located (here we'll use the location C:\Program Files\R\R-<version>), then follow these steps.
+To do this, determine where your R installation is located (here we'll use the location C:\Program Files\R\R-&lt;version&gt;), then follow these steps.
 
 1. Open the System Properties dialog. You can type "Environment Variable" into Cortana or navigate there through "Control Panel" > System > "Advanced system settings".
 2. Click the "Environment variables..." button in the lower right of the dialog.
