@@ -63,7 +63,8 @@ import org.rosuda.REngine.REngine;
  * @version 1.0beta
  */
 class ShellWindow extends javax.swing.JFrame
-    implements KeyListener,
+    implements org.nlogo.api.ExtensionManager,
+        KeyListener,
         ActionListener,
         org.rosuda.REngine.REngineOutputInterface,
         org.rosuda.REngine.REngineInputInterface,
@@ -487,6 +488,14 @@ class ShellWindow extends javax.swing.JFrame
 
   /** currently unused */
   public Primitive replaceIdentifier(String arg0) {
+    return null;
+  }
+
+  public <A> void removeInstrumentation(String name, Class<A> klass) { }
+
+  public <A> void addInstrumentation(String name, A instrument, Class<A> klass) { }
+
+  public org.nlogo.core.Model activeModel() {
     return null;
   }
 
